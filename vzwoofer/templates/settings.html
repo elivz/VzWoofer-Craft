@@ -1,0 +1,25 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+    first:        true,
+    label:        "Subdomain"|t,
+    id:           'subdomain',
+    name:         'subdomain',
+    instructions: 'This is the first part of the URL when you are logged into your Wufoo account. If you logged in at http://xxx.wufoo.com, your subdomain would be "xxx".'|t,
+    value:        settings.subdomain,
+    errors:       settings.getErrors('subdomain')
+}) }}
+
+{{ forms.textField({
+    first:        true,
+    label:        "API Key"|t,
+    id:           'apiKey',
+    name:         'apiKey',
+    instructions: 'You can find your API key by clicking the "code" link under any of your forms, and then clicking the "API Information" button in the upper-right <a id="api-link" target="_blank"></a>'|t,
+    value:        settings.apiKey,
+    errors:       settings.getErrors('apiKey')
+}) }}
+
+<a class="btn small" id="api-connect">Test Connection</a>
+
+<p id="connection-msg"></p>

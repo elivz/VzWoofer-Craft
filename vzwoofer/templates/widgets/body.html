@@ -1,0 +1,24 @@
+<div class="wufooforms-container">
+
+    {% if forms|length %}
+        <table class="data fullwidth">
+            {% for form in forms %}
+                <tr>
+                    <td>
+                        <a href="https://{{ subdomain }}.wufoo.com/entries/{{ form.url }}/" target="_blank">{{ form.name }}</a>
+                        {% if form.EntryCountToday is defined %}
+                            <span class="light">
+                                {{ form.entrycounttoday }}
+                            </span>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% elseif subdomain == '' %}
+        <p>{{ "You need to set your API settings in the plugin settings page."|t }}</p>
+    {% else %}
+        <p>{{ "No forms exist yet."|t }}</p>
+    }
+    {% endif %}
+</div>

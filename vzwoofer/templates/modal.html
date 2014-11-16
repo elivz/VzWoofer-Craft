@@ -1,0 +1,14 @@
+<!-- Clips modal HTML -->
+<div id="wufoo-modal" style="display: none;">
+    <div class="redactor_modal_btn redactor_btn_modal_close"></div>
+    <section>
+        <ul class="redactor_forms_box">
+            {% for form in forms %}
+                <li>
+                    <a href="#" class="redactor_wufoo_link" data-form-id="{{ form.Hash }}">{{ form.Name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+</div>
+<!-- end Clips modal HTML -->
