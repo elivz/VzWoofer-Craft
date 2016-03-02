@@ -40,5 +40,5 @@ Roadmap
 -------
 
 * Redactor toolbar button (does not seem to be currently possible - script tags are stripped)
-* Display form submissions in Craft
-* Retrieve additional information about the webpage (OpenGraph, etc) and make it available in templates
+* Display form submissions in Craft, maybe make them available in templates as well?
+* Support multiple Wufoo accounts
